@@ -30,7 +30,7 @@ Pro generování náhodných čísel v Javě slouží třída [Random](https://d
 Kód pro načtení řádků souboru v *resourcech* do seznamu řetězců (`List<String>`):
 
 ```java
-private static List<String> readAllLines(String resource)throws IOException{
+pprivate static List<String> readAllLines(String resource)throws IOException{
     //Soubory z resources se získávají pomocí classloaderu. Nejprve musíme získat aktuální classloader.
     ClassLoader classLoader=Thread.currentThread().getContextClassLoader();
 
@@ -39,10 +39,10 @@ private static List<String> readAllLines(String resource)throws IOException{
     try(InputStream inputStream=classLoader.getResourceAsStream(resource);
         BufferedReader reader=new BufferedReader(new InputStreamReader(inputStream,StandardCharsets.UTF_8))){
 
-    //Metoda lines() vrací stream řádků ze souboru. Pomocí kolektoru převedeme Stream<String> na List<String>.
-    return reader
-        .lines()
-        .collect(Collectors.toList());
+        //Metoda lines() vrací stream řádků ze souboru. Pomocí kolektoru převedeme Stream<String> na List<String>.
+        return reader
+                .lines()
+                .collect(Collectors.toList());
     }
 }
 

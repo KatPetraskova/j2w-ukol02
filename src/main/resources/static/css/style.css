@@ -30,3 +30,14 @@ blockquote {
     border-radius: 1em;
     backdrop-filter: blur(10px);
 }
+
+.obrazek {
+    background-size: cover;
+    background-position: center;
+    width: 100vw; height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
